@@ -9,9 +9,9 @@ from modules.structures import Mesh, TreeNode
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument("--sidesize", "-s", type=int, choices=range(1, 100), dest="size", default=5,
+    parser.add_argument("--sidesize", "-s", type=int, choices=range(1, 100), dest="size", required=True,
                         help="Size size of modelling mesh (square) in nodes")
-    parser.add_argument("--type", "-t", type=str, choices=["BOND", "NODE"],
+    parser.add_argument("--type", "-t", type=str, choices=["BOND", "NODE"], required=True,
                         help="Type of Model (BOND or NODE)")
     parser.add_argument("--pause", "-p", type=float, default=1, help="Pause between nodes/bonds activation")
     args = parser.parse_args()
