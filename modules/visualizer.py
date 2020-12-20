@@ -169,9 +169,3 @@ class Visualizer:
         self._draw_tree_connections(nodes, cell_size, anchors)
 
         self._root.update()
-
-
-if __name__ == '__main__':
-    v = Visualizer()
-    v.draw_mesh(Mesh(5))
-    v.start_ui()

@@ -1,3 +1,4 @@
+# https://stackoverflow.com/questions/952914/how-to-make-a-flat-list-out-of-list-of-lists
 def flatten(L):
     if L is None:
         return None

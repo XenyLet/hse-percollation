@@ -5,7 +5,6 @@ from modules.utils import flatten
 # SEED = 5
 SEED = None
 
-
 class TreeNode:
     # _active = False
     _id = None
@@ -103,7 +102,6 @@ class TreeNode:
     def get_dist_to_root(self):
         return self._dist_to_root
 
-
 class Mesh:
     _size = None
     _nodes = None
@@ -159,7 +157,8 @@ class Mesh:
 
         self._size = side_size
 
-        self._nodes = [[TreeNode(k * self._size + i) for i in range(self._size)] for k in range(self._size)]
+        self._nodes = [
+            [TreeNode(k * self._size + i) for i in range(self._size)] for k in range(self._size)]
         self._clusters_number = self._size ** 2
 
         if type == self.TYPE_BOND:
@@ -380,7 +379,6 @@ class Mesh:
             return acc
         if self._type == self.TYPE_NODE:
             return sum([node.is_activated() for node in flatten(self._nodes)])
-
 
 def get_root(node: TreeNode, iters_limit=Mesh.NODES_NUM_LIMIT ** 2):
     assert isinstance(node, TreeNode)
