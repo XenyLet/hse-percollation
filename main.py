@@ -37,7 +37,7 @@ if __name__ == '__main__':
     parser.add_argument("--vis", action="store_true", help="Show mesh visualization")
     args = parser.parse_args()
 
-    assert 50 >= args.size >= 1, "Mesh size should be integer in [1; 50]"
+    assert 99 >= args.size >= 1, "Mesh size should be integer in [1; 50]"
     assert args.pause > 0, "Pause should be > 0"
 
     res = conduct_experiment(args.size,
